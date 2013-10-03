@@ -1,28 +1,10 @@
-== README
+# Posts_of_interest
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple hacker news clone as part of
+[Epicodus](http://www.epicodus.com/).
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Before running the app, run `bundle install` to install the necessary gems, `rake db:create` to
+create your database, and then `rake db:schema:load` to load the database schema.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Enjoy!
