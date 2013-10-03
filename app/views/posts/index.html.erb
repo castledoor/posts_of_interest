@@ -1,0 +1,37 @@
+<h1> NERD NEWS </h1>
+
+
+  <div id="user_header">
+    <% if current_user %>
+     <p> Logged in as <%= current_user.username %>.</p>
+      <%= link_to "Log Out", logout_path %>
+    <% else %>
+      <%= link_to "Sign Up", new_user_path %>
+      <%= link_to "Log In", new_session_path %>
+    <% end %>
+  </div>
+
+  <div id="make_a_post">
+    <% if current_user %>
+      <%= form_for @post do |f| %>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+        <%= f.text_field :link %>
+        <%= f.submit %>
+      <% end %>
+    <% end %>
+  <div>
+
+  <ul style="list-style:none">
+    <% @sort.each do |post| %>
+      <li><%= link_to post.description, post.link %></li>
+      <li>Posted by: <%= post.user.username %></li>
+      <li><%= post.votes.count %> votes </li>
+      <%= post.points %>
+      <%= form_for @vote do |f| %>
+        <%= f.hidden_field :post_id, :value => post.id %>
+        <%= f.submit %>
+      <% end %>
+    <% end %>
+  </ul>
+
