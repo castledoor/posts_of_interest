@@ -1,4 +1,4 @@
-<h1> NERD NEWS </h1>
+<h1> POSTS OF INTEREST </h1>
 
 
   <div id="user_header">
@@ -27,6 +27,7 @@
       <li><%= link_to post.description, post.link %></li>
       <li>Posted by: <%= post.user.username %></li>
       <li><%= post.votes.count %> votes </li>
+      <li><%= link_to 'view comments', post_path(post) %> </li>
       <%= post.points %>
       <%= form_for @vote do |f| %>
         <%= f.hidden_field :post_id, :value => post.id %>
@@ -35,3 +36,4 @@
     <% end %>
   </ul>
 
+ 

@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.create(post_params)
     @post.user_id = current_user.id
     @posts = Post.all
     if @post.save
@@ -23,7 +23,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(post_params[:id])
+    @post = Post.find(params[:id])
+    @comment = Comment.new(:commentable_id => @post.id, :commentable_type => Post)
+    @comments = @post.comments
   end
 
 private

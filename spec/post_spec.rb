@@ -4,6 +4,7 @@ describe Post do
 
   it { should have_many :votes }
   it { should belong_to :user }
+  it { should have_many :comments }
   
   it "sorts posts by number of votes" do
     user1 = User.create( :username => "blah1", :password => "blah")
