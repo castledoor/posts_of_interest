@@ -10,10 +10,10 @@ class CommentsController < ApplicationController
   def create 
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
-    @post_id = params[:comment][:post_id]
+    # @post_id = params[:comment][:post_id]
     if @comment.save
       flash[:notice] = "thank you for contributing"
-      redirect_to post_path(params[:id])
+      redirect_to post_path(@comment.post.id)
     else render :new
     end
   end

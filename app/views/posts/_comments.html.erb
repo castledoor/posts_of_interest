@@ -1,0 +1,8 @@
+<ul style="list-style:none">
+  <% comments.each do |comment| %>
+    <li><%= comment.text %></li>
+    <li><%= link_to 'comment on this comment', new_comment_path(:commentable_id => comment.id, :commentable_type => Comment) %> </li>
+
+    <%= render 'comments', comments: comment.comments %>
+  <% end %>
+</ul>
