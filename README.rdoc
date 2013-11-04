@@ -1,10 +1,12 @@
 # Posts_of_interest
 
-This is a simple hacker news clone as part of
-[Epicodus](http://www.epicodus.com/).
+<p>This is a simple hacker news clone as part of Epicodus</p>
+<p>http://www.epicodus.com</p>
 
-Before running the app, run `bundle install` to install the necessary gems, `rake db:create` to
-create your database, and then `rake db:schema:load` to load the database schema.
+<p>Before running the app, run</p>
+<p>`bundle install` to install the necessary gems, </p>
+<p>`rake db:create` to create your database, and then </p>
+<p>`rake db:schema:load` to load the database schema.</p>
 
 
-Enjoy!
+<p>Enjoy!</p>
