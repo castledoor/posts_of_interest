@@ -1,15 +1,4 @@
-<h1> POSTS OF INTEREST </h1>
 
-
-  <div id="user_header">
-    <% if current_user %>
-     <p> Logged in as <%= current_user.username %>.</p>
-      <%= link_to "Log Out", logout_path %>
-    <% else %>
-      <%= link_to "Sign Up", new_user_path %>
-      <%= link_to "Log In", new_session_path %>
-    <% end %>
-  </div>
 
   <div id="make_a_post">
     <% if current_user %>

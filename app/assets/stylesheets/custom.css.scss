@@ -1,0 +1,98 @@
+@import "bootstrap";
+
+body {
+  background-image:url('sos.png');
+  text-align: justify;
+  color: black;
+}
+a {
+  color: #dc6e49;
+  text-align: right;
+}
+.navbar{
+  color: black;
+}
+
+.navbar-default {
+  background-color: #dc6e49;
+  border-radius: 1px;
+}
+
+.navbar {
+  min-height: 130px;
+}
+
+.yellow-stripe {
+  background-color: #e8d56c;
+  min-height: 9px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.teal-stripe {
+  background-color: #2e8b8c;
+  min-height: 41px;
+  width: 100%;
+  margin-top: 0px;
+  box-shadow: 1px 1px 6px #888887;
+}
+
+
+
+.banner {
+  position: relative;
+  width: 60px;
+  margin-left: 30px;
+  margin-top: 0%;
+  
+
+}
+
+.navbar-default .navbar-brand {
+  color: #80686a;
+  font-family: 'Raleway', sans-serif;
+  font-size: 60px;
+}
+
+.navbar .navbar-default {
+  height: 0px;
+}
+
+.post-header {
+  width:60%;
+  margin-left: 19%;
+  margin-top: 3%;
+
+}
+
+@media (min-width: 900px) {
+  .banner { 
+    position: fixed;
+  }
+}
+
+#user_header {
+  float:right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.signup {
+  padding-right: 10px;
+  color:white;
+}
+.login {
+  color:white;
+}
+.logout {
+  color:white;
+  padding-left: 30px;
+  
+}
+
+#user_header p {
+  color:white;
+  float: left;
+  padding-left: 20px;
+
+}
