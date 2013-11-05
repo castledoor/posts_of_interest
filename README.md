@@ -8,5 +8,5 @@
 <p>`rake db:create` to create your database, and then </p>
 <p>`rake db:schema:load` to load the database schema.</p>
 
-
+<p><a href="http://posts-of-interest.com"> Posts of Interest </a></p>
 <p>Enjoy!</p>
