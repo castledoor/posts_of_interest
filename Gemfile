@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'bootstrap-sass', git: 'https://github.com/thomas-mcdonald/bootstrap-sass'
+gem 'cancan'
 
 group :test, :development do
   gem 'rspec-rails'

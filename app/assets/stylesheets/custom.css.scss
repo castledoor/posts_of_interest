@@ -96,3 +96,30 @@ a {
   padding-left: 20px;
 
 }
+.button {
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    font-family: Arial;
+    color: white;
+    font-size: 20px;
+    background: #e8d56c;
+    padding: 10px 8px 10px 8px;
+    text-decoration: none;
+    border: none;
+    font-size: 10px;
+}
+
+.label {
+  color: #dc6e49;
+}
+#make_a_post {
+  text-align: center;
+}
+
+.post-info {
+  text-align: justify;
+  width: 400px;
+  height: 151px;
+  margin:auto;
+}

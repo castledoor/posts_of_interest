@@ -2,20 +2,23 @@
 
   <div id="make_a_post">
     <% if current_user %>
-      <%= form_for @post do |f| %>
-        <%= f.label :description %>
-        <%= f.text_field :description %>
-        <%= f.text_field :link %>
-        <%= f.submit %>
+      <%= form_for @post  do |f| %>
+        <%= f.label :description , :class => 'label' %>
+        <%= f.text_field :description, :class => 'form-group' %>
+        <%= f.label :link , :class => 'label'%>
+        <%= f.text_field :link, :class => 'form-group' %>
+        <%= f.submit :class => 'button' %>
       <% end %>
     <% end %>
   <div>
 
-  <ul style="list-style:none">
+  <ul class='post-info' style="list-style:none">
     <% @sort.each do |post| %>
       <li><%= link_to post.description, post.link %></li>
       <li>Posted by: <%= post.user.username %></li>
       <li><%= post.votes.count %> votes </li>
+      
+      <li><%= link_to "delete", post_path(:id => post.id) ,:method => :delete, :data => { :confirm => 'Are you sure?' } %> </li>
       <li><%= link_to 'view comments', post_path(post) %> </li>
       <%= post.points %>
       <%= form_for @vote do |f| %>

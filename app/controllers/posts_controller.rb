@@ -28,6 +28,14 @@ class PostsController < ApplicationController
     @comments = @post.comments
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:notice] = "Your post has been destroyed."
+    redirect_to posts_path
+  end
+
+
 private
   def post_params
     params.require(:post).permit(:link, :description)
